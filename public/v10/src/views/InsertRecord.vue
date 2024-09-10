@@ -26,7 +26,7 @@
           </tr>
           <tr>
             <td></td>
-            <td><Button class="btn btn-primary w-100" @click="insertRecord()">Submit</Button></td>
+            <td><Button class="btn btn-primary w-100" @click="InsertRecord()">Submit</Button></td>
           </tr>
         </tbody>
         </table>
@@ -42,7 +42,7 @@
   import Navigation from '@/components/Navigation.vue';
 
   export default{
-  name: 'HomeView',
+  name: 'InsertRecord',
   components: {Navigation},
   data(){
     return{
@@ -53,10 +53,10 @@
 
   },
   methods: {
-    async insertRecord () {
-      await axios.get("http://127.0.0.1:8000/api/user/insertRecord/"+this.lname+"/"+this.fname+"/"+this.age).then( async(response) =>{
+    async InsertRecord () {
+      await axios.get("http://127.0.0.1:8000/api/user/insertRecord/"+this.fname+"/"+this.lname+"/"+this.age).then( async(response) =>{
         Swal.fire({
-        title: "success",
+        title: "Success",
         text: response.data?.message,
         icon: "success"
 });

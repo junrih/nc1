@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li><router-link to="./">Insert Record</router-link></li>
-            <li><router-link to="./getRecord">Get record</router-link></li>
+            <li><router-link to="./getrecord">Get record</router-link></li>
         </ul>
     </nav>
 </template>
